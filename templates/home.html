@@ -4,27 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
-        h1{
-            font-size: 40px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: normal;
-            text-align: center;
-            color: rgb(100, 0, 0);
-        }
         #banner{
+            height: 360px;
             width: 100%;
-            height: 430px;
         }
     </style>
 </head>
 <body>
-    <h1>How to Success in IT</h1>
-    <img id="banner" src="/static/bgimage.webp" alt="image">
-    <h1>About</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic laboriosam exercitationem quisquam necessitatibus nesciunt quia aliquam ab et deleniti officia? Dignissimos, deserunt! Repellendus exercitationem delectus minima. Magni ratione quasi, eos laborum suscipit, nostrum repellendus hic ullam vero consequatur eaque perspiciatis. Molestiae minus ducimus eveniet earum cupiditate fuga repellat. Ullam minus facilis labore ducimus cupiditate illo nam exercitationem vel provident natus repellendus necessitatibus quasi ipsam sint eos, ea, quos rerum aspernatur iusto. Quibusdam odit magnam eligendi, quae assumenda eius sint non exercitationem omnis voluptatibus repudiandae nostrum harum maxime dignissimos facere voluptates. Ipsum voluptate obcaecati repudiandae cumque ratione porro placeat illo eius nam impedit ducimus quibusdam natus quidem commodi numquam voluptates atque, perferendis labore corrupti consequatur, minima tempore sed. Accusamus eum rem voluptatibus! Cum quidem nihil ducimus maiores quo omnis esse autem odit neque, earum sequi, amet eum minus quia a perferendis illo ipsam eveniet natus reiciendis. Mollitia sequi eius excepturi cumque veniam molestias totam est voluptas id recusandae cum aliquid iure quas amet, nostrum omnis ipsum magni molestiae nisi, reprehenderit eaque expedita, culpa architecto et? Blanditiis quas veniam molestiae aliquam numquam neque non? At dicta quaerat tempora qui explicabo, non nam! Ea nesciunt sed quisquam fugiat libero, modi necessitatibus magnam alias corrupti quis eius maiores quos excepturi? Cupiditate veniam in deleniti nemo, temporibus mollitia consequuntur similique facere provident qui illum quis iure porro libero velit ducimus officiis earum maxime. Alias commodi beatae dolorum iusto animi velit, quasi cumque, laboriosam quia similique vel? Officiis reiciendis blanditiis doloribus aliquam, nihil hic recusandae ut nesciunt at non repudiandae pariatur sint architecto, nisi cum dicta harum quae! Porro eaque ducimus possimus amet quis totam aperiam laudantium a deleniti, voluptate dolores soluta esse minima earum voluptatum provident placeat aspernatur. Placeat beatae, officia blanditiis ab obcaecati ducimus tenetur eum rem voluptatum facilis repudiandae voluptate vel officiis quam.</p>
-    <h2>Open position</h2>
-    <p>TODO-job here!</p>
-    <button>About Us</button>
+    <div class="container">
+    <h1 class="text-center mt-2 mb-4">How to Success in IT</h1>
+    <img class="img-fluid" id="banner" src="/static/bgimage.webp" alt="image">
+    <h1 class="text-center mt-2 mb-4">About</h1>
+    <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic laboriosam exercitationem quisquam necessitatibus nesciunt quia aliquam ab et deleniti officia? Dignissimos, deserunt! Repellendus exercitationem delectus minima. Magni ratione quasi, eos laborum suscipit, nostrum repellendus hic ullam vero consequatur eaque perspiciatis. Molestiae minus ducimus eveniet earum cupiditate fuga repellat. Ullam minus facilis labore ducimus cupiditate illo nam exercitationem vel provident natus repellendus necessitatibus quasi ipsam sint eos, ea, quos rerum aspernatur iusto. Quibusdam odit magnam eligendi, quae assumenda eius sint non exercitationem omnis voluptatibus repudiandae nostrum harum maxime dignissimos facere voluptates. Ipsum voluptate obcaecati repudiandae cumque ratione porro placeat illo eius nam impedit ducimus quibusdam natus quidem commodi numquam voluptates atque, perferendis labore corrupti consequatur, minima tempore sed. Accusamus eum rem voluptatibus! Cum quidem nihil ducimus maiores quo omnis esse autem odit neque, earum sequi, amet eum minus quia a perferendis illo ipsam eveniet natus reiciendis. Mollitia sequi eius excepturi cumque veniam molestias totam est voluptas id recusandae cum aliquid iure quas amet, nostrum omnis ipsum magni molestiae nisi, reprehenderit eaque expedita, culpa architecto et? Blanditiis quas veniam molestiae aliquam numquam neque non? At dicta quaerat tempora qui explicabo, non nam! Ea nesciunt sed quisquam fugiat libero, modi necessitatibus magnam alias corrupti quis eius maiores quos excepturi? Cupiditate veniam in deleniti nemo, temporibus mollitia consequuntur similique facere provident qui illum quis iure porro libero velit ducimus officiis earum maxime. Alias commodi beatae dolorum iusto animi velit, quasi cumque, laboriosam quia similique vel? Officiis reiciendis blanditiis doloribus aliquam, nihil hic recusandae ut nesciunt at non repudiandae pariatur sint architecto, nisi cum dicta harum quae! Porro eaque ducimus possimus amet quis totam aperiam laudantium a deleniti, voluptate dolores soluta esse minima earum voluptatum provident placeat aspernatur. Placeat beatae, officia blanditiis ab obcaecati ducimus tenetur eum rem voluptatum facilis repudiandae voluptate vel officiis quam.</p>
+    <h2 class="text-center mt-2 mb-4">Open position</h2>
+    <div>
+        {% for job in jobs %}
+            {% include 'jobitems.html' %}
+            <hr>
+        {% endfor %}
+    </div>
+    <div class="text-center">
+    <button class="btn btn-dark btn-lg">{{about}} Us</button>
+    <p class="mt-4">@Copyright 2023,testing</p>
+    </div>
+    </div>
 </body>
 </html>
